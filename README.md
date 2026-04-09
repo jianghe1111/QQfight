@@ -177,6 +177,7 @@ The wrappers follow the same commands as the README examples above and default t
 - Training task: `General-Tracking-Flat-G1-v0`
 
 They expect a working Isaac Lab + Isaac Sim environment before motion preprocessing or training.
+The wrapper scripts set `OMNI_KIT_ACCEPT_EULA=YES` automatically for non-interactive shells.
 
 ## MOSAIC Training
 

@@ -26,6 +26,7 @@ RUN_NAME="${RUN_NAME:-lafan1_g1_general_tracking}"
 LOGGER="${LOGGER:-wandb}"
 HEADLESS_FLAG="${HEADLESS_FLAG:---headless}"
 NPROC_PER_NODE="${NPROC_PER_NODE:-1}"
+export OMNI_KIT_ACCEPT_EULA="${OMNI_KIT_ACCEPT_EULA:-YES}"
 
 if [[ ! -d "${MOTION_PATH}" && ! -f "${MOTION_PATH}" ]]; then
     echo "[ERROR] Motion path does not exist: ${MOTION_PATH}" >&2

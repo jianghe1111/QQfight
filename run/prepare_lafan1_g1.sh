@@ -24,6 +24,7 @@ OUTPUT_DIR="${OUTPUT_DIR:-${REPO_ROOT}/data/lafan1_retargeting/npz/g1}"
 OUTPUT_PREFIX="${OUTPUT_PREFIX:-lafan1_g1}"
 INPUT_FPS="${INPUT_FPS:-30}"
 HEADLESS_FLAG="${HEADLESS_FLAG:---headless}"
+export OMNI_KIT_ACCEPT_EULA="${OMNI_KIT_ACCEPT_EULA:-YES}"
 
 if [[ ! -d "${INPUT_DIR}" ]]; then
     echo "[ERROR] Input CSV directory does not exist: ${INPUT_DIR}" >&2
