@@ -153,6 +153,31 @@ python scripts/rsl_rl/play.py --task=General-Tracking-Flat-G1-v0 --num_envs=2 --
 The WandB run path can be located in the run overview. It follows the format {your_organization}/{project_name}/ along
 with a unique 8-character identifier. Note that run_name is different from run_path.
 
+### LAFAN1 G1 Quickstart
+
+If you want to train the official general tracking pipeline with
+[lvhaidong/LAFAN1_Retargeting_Dataset](https://huggingface.co/datasets/lvhaidong/LAFAN1_Retargeting_Dataset),
+the repository now includes three convenience wrappers:
+
+```bash
+# 1) Download the G1 CSV subset from Hugging Face
+bash run/download_lafan1_g1_dataset.sh
+
+# 2) Convert CSV motions to local NPZ files
+bash run/prepare_lafan1_g1.sh
+
+# 3) Train the official multi-motion G1 tracker
+bash run/run_lafan1_g1_general_tracking.sh
+```
+
+The wrappers follow the same commands as the README examples above and default to these paths:
+
+- CSV input: `data/lafan1_retargeting/hf_repo/g1`
+- NPZ output: `data/lafan1_retargeting/npz/g1`
+- Training task: `General-Tracking-Flat-G1-v0`
+
+They expect a working Isaac Lab + Isaac Sim environment before motion preprocessing or training.
+
 ## MOSAIC Training
 
 This section follows the full training flow in order. Before training, prepare the following motion sources:

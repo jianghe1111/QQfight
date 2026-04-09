@@ -1,0 +1,9 @@
+data/
+logs/
+outputs/
+wandb/
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.pyc
